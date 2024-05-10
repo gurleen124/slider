@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="bg-gray-100">
+    <section>
+        <div class="relative w-[80vw] mx-auto h-[75vh] border-4 border-blue-500 rounded-md mt-16 overflow-hidden">
+            <div class="fixed z-10 w-[79vw] text-white text-4xl grid grid-cols-2 justify-center h-[75vh]">
+                <button type="button" onclick="prevBtn()" class="text-start prev invisible"><i class="fa-solid fa-circle-arrow-left"></i></button>
+                <button type="button" onclick="nextBtn()" class="text-end next"><i class="fa-solid fa-circle-arrow-right"></i></button>
+            </div>
+            <div
+                class="slide absolute text-white w-full h-full grid place-items-center text-center transition-all ease-in-out duration-1000">
+                <img src="https://vannilla-js-basic-project-15-slider.netlify.app/img-1.jpeg" alt="ocean"
+                    class="object-cover h-full w-full">
+                <h2 class="absolute text-8xl font-bold">1</h2>
+            </div>
+            <div
+                class="slide bg-sky-400 absolute text-white flex justify-center items-center h-full w-full transition-all ease-in-out duration-1000">
+                <h2 class="absolute text-8xl font-bold">2</h2>
+            </div>
+            <div
+                class="slide text-white absolute bg-center flex justify-center items-center transition-all ease-in-out duration-1000 bg-[url(https://vannilla-js-basic-project-15-slider.netlify.app/img-2.jpeg)] bg-cover w-full h-full bg-black bg-opacity-50 bg-blend-overlay">
+                <h2 class="absolute text-8xl font-bold">3</h2>
+            </div>
+            <div
+                class="slide bg-blue-200 absolute w-full h-full flex justify-center text-white transition-all ease-in-out duration-1000">
+                <div class="text-center flex flex-col justify-center">
+                    <img src="https://vannilla-js-basic-project-15-slider.netlify.app/person-1.jpeg" alt="girl image"
+                        class="rounded-full h-36 w-36 mb-3">
+                    <h4 class="text-2xl">Susan Doe</h4>
+                    <h2 class="text-8xl font-bold">4</h2>
+                </div>
+            </div>
+        </div>
+        <div
+            class="btn-container flex justify-center mt-5 text-3xl space-x-5 font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-pink-500">
+            <button type="button" onclick="prevBtn()" class="hover:text-blue-600 prev invisible">Prev</button>
+            <button type="button" onclick="nextBtn()" class="hover:text-blue-600 next">Next</button>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+
+</html>
